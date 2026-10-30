@@ -2,11 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 name: "Publish to GitHub Pages"
 on:
-  workflow_run:
-    workflows:
-      - "Build and Export Game"
-    types:
-      - completed
+  push:
     branches:
       - main
 

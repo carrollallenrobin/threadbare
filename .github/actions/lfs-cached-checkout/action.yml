@@ -21,8 +21,11 @@ runs:
     - name: Fetch and check out LFS objects
       shell: bash
       run: |
-        # Fetch missing objects, prune extraneous ones
-        git lfs fetch --prune
+        # Fetch missing objects, prune extraneous ones.
+        # This fork does not store LFS objects, so fall back to upstream.
+        if ! git lfs fetch --prune; then
+          git -c lfs.url=https://github.com/endlessm/threadbare.git/info/lfs lfs fetch
+        fi
 
         # Check out content
         git lfs checkout
