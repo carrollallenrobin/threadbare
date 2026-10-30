@@ -2,13 +2,13 @@
 # SPDX-License-Identifier: MPL-2.0
 name: "Publish to GitHub Pages"
 on:
-  delete:
-  workflow_dispatch:
   workflow_run:
     workflows:
       - "Build and Export Game"
     types:
       - completed
+    branches:
+      - main
 
 # Cancel any ongoing previous run if the job is re-triggered
 concurrency:
