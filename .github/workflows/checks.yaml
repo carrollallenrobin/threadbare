@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
 name: Checks
-
+# Run lint and license checks when a version tag is pushed.
 on:
   push:
     tags:

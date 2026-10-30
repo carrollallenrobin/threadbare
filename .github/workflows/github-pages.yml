@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
 name: "Publish to GitHub Pages"
+# Build the Web export and deploy it when main is updated.
 on:
   push:
     branches:

@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: The Threadbare Authors
 # SPDX-License-Identifier: MPL-2.0
 name: "Build and Export Game"
+# Export the game when a version tag is pushed.
 on:
   push:
     tags:
